@@ -19,6 +19,7 @@
 // from SOB volume - exactly the same for CG and CB methods
 #include <fstream>
 #include <iostream>
+
 #include "random_walks.hpp"
 #include "random.hpp"
 #include "random/uniform_int.hpp"
@@ -41,6 +42,9 @@
 #include "preprocess/svd_rounding.hpp"
 #include "preprocess/max_inscribed_ellipsoid_rounding.hpp"
 #include "preprocess/get_full_dimensional_polytope.hpp"
+
+#include "preprocess/crhmc/crhmc_input.h"
+#include "preprocess/crhmc/crhmc_problem.h"
 
 typedef double NT;
 typedef Cartesian<NT>    Kernel;

@@ -38,6 +38,7 @@ extra_volesti_include_dirs = [
     join("eigen"),
     join("boost_1_76_0"),
     join("boost_1_76_0", "boost"),
+    join("qd-2.3.23/include"),
     join("volesti", "external"),
     join("volesti", "external", "minimum_ellipsoid"),
     # include and add the directories on the "include" directory

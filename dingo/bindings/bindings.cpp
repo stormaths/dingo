@@ -156,6 +156,23 @@ double HPolytopeCPP::apply_sampling(int walk_len,
          
       rand_points = hmc_leapfrog_exponential(walk_len, number_of_points, number_of_points_to_burn, variance, bias_vector, starting_point, HP); 
                                   
+   } else if (method == 12) { // Constrained Riemann HMC
+      using Kernel = Cartesian<NT>;
+      using Point = typename Kernel::Point;
+      using MT = Eigen::Matrix<NT, Eigen::Dynamic, Eigen::Dynamic>;
+      using VT = Eigen::Matrix<NT, Eigen::Dynamic, 1>;
+      /*
+      using RandomNumberGenerator = BoostRandomNumberGenerator<boost::mt19937, NT>;
+      using Func = GaussianFunctor::FunctionFunctor<Point>;
+      using Grad = GaussianFunctor::GradientFunctor<Point>;
+      using Hess = GaussianFunctor::HessianFunctor<Point>;
+      using func_params = GaussianFunctor::parameters<NT, Point>;
+      using Input = crhmc_input<MT, Point, Func, Grad, Hess>;
+      using CrhmcProblem = crhmc_problem<Point, Input>;
+      using Solver = ImplicitMidpointODESolver<Point, NT, CrhmcProblem, Grad>;
+      using Opts = opts<NT>;
+      using Hpolytope = HPolytope<Point>;
+      */   
    }
      
    else {
